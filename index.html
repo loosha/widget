@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+    .orange-box {
+        width: 100px;
+        background-color: white;
+        border-width: 5px;
+        border-style: solid;
+        border-color: orange;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .weather-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .location-box {
+        color: orange;
+    }
+
+    .degrees {
+        color: orange
+    }
+
+    </style>
+    <script type="text/javascript">
+    var degrees;
+
+    function sayHello() {
+        alert('hello');
+    }
+
+    function bringDegrees() {
+            // goes to the server and asks for the degrees
+            degrees = 32;
+        }
+
+
+
+        function changeImage(src) {
+
+            var image = document.getElementsByClassName('weather-icon')[0];
+
+
+
+
+            image.src = src;
+
+        }
+
+
+
+
+
+
+
+        function whatToWear() {
+
+
+
+
+            if (degrees > 30) {
+
+                changeImage('images/sun.jpg');
+
+                alert('wear sunscreen! - and go naked');
+
+            } else if (degrees > 20) {
+
+                alert('wear TShirt!');
+
+            } else if (degrees > 10) {
+
+                alert('wear Sweatshirt!');
+
+            } else if (degrees > 0) {
+
+                alert('wear what Eskimos wear!');
+
+            } else  {
+
+                alert('stay at home next to the fireplace!');
+
+            }
+
+        }
+
+
+
+
+        bringDegrees();
+
+        </script>
+
+        <script type="text/javascript" src="http://sslstatic.wix.com/services/js-sdk/1.16.4/js/Wix.js"></script>
+
+    </head>
+
+    <body>
+
+
+
+
+
+
+
+        <div class="orange-box">
+
+            <img src="" class="weather-icon"/>
+
+
+
+
+            <div class="location-box">
+
+                <div>Tel Aviv</div>
+
+                <div>Israel</div>
+
+
+
+
+            </div>
+
+
+
+
+            <div class="degrees">32&#8451;</div>
+
+
+
+
+            <button onclick="whatToWear();">What should i wear?</button>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </body>
+
+    </html>
